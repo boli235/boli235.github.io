@@ -31,7 +31,8 @@ title: 范坤鹏的个人主页
   - 智能机器人与群体智能系统 | 机器人控制技术 | 机器人集群协同控制 | 嵌入式系统
 
 - **查看我的详细[教育经历与竞赛奖项](details.md)**
-<br>
+
+---
 
 ## 🚀个人优势
 
@@ -72,6 +73,8 @@ title: 范坤鹏的个人主页
   <img src="https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white">
   <img src="https://img.shields.io/badge/嘉立创-1C77E8?style=for-the-badge&logo=microchip&logoColor=white">
 </p>
+
+---
 
 ## 科研项目
 -✨ [项目名称 1](https://github.com/仓库地址)
