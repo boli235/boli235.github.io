@@ -89,11 +89,16 @@ title: 范坤鹏的个人主页
 ## 科研项目
 -✨ [第二十四届全国大学生机器人大赛ROBOCON]
 <p align="center">
-  <img src="../25RC合影.jpg" alt="合影照片" width="600"/>
+  <img src="../25RC合影.jpg" alt="合影照片" width="400"/>
 </p>   
   - 简要描述：
+  
 -✨ [国家级大学生创新训练计划项目“基于矢量底盘的多功能篮球训练机器人”]
   - 简要描述：
 -✨ [全国大学生创新年会 “球类辅助训练与物资运送一体化机器人” ]
+<p align="center">
+  <img src="../创新年会合影.jpg" alt="合影照片" width="400"/>
+</p>  
+  - 简要描述：
 ---
 [我的 GitHub 主页](https://github.com/boli235)
