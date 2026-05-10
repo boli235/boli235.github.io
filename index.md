@@ -21,7 +21,6 @@ title: 范坤鹏的个人主页
 - **西南交通大学 \| 通信工程 \| 本科（2023.09 - 至今）**
 
 - **核心学业数据（前五学期）**
-  <div style="margin-left: 25px; margin-top: 10px; margin-bottom: 20px;">
   
 | 课程均分 | 绩点 (GPA) | 专业排名 |
 | :--- | :--- | :--- |
@@ -30,7 +29,6 @@ title: 范坤鹏的个人主页
   </div>
   
 - **获得证书**
-  <div style="margin-left: 25px; margin-top: 10px; margin-bottom: 20px;">
   
 | 英语四级 (CET-4) | 英语六级 (CET-6) | 计算机二级 (C语言) |
 | :--- | :--- | :--- |
