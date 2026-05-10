@@ -5,7 +5,7 @@
 // 修改顶部背景
 .page-header {
   /* 使用 linear-gradient 在图片上盖一层半透明黑影，确保白色文字清晰可见 */
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../header-bg.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../header-bg.jpg");
   
   /* 让图片铺满整个区域 */
   background-size: cover;
