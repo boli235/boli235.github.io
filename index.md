@@ -18,9 +18,11 @@ title: 范坤鹏的个人主页
 
 ## 🎓 我的教育背景
 
-- **西南交通大学**  \|通信工程  \|本科（2023.09 - 至今）
-- **核心数据（前五学期）**: 
-  课程均分: 91.44 | 绩点: 3.78 | 专业排名: 8/137
+- **西南交通大学  \|通信工程  \|本科（2023.09 - 至今）**
+#### 📊 核心学业数据（前五学期）
+| 课程均分 | 绩点 (GPA) | 专业排名 |
+| :---: | :---: | :---: |
+| **91.44** | **3.78** | **8 / 137** |
 - **相关证书**:
   英语四级: 540 | 英语六级：464 | 计算机二级：优秀（C语言）
 - **主修课程**: 嵌入式系统设计与应用、模拟电子技术、数字电子技术、电路分析、电子系统设计与实践、计算机组成原理、计算机网络、信号与系统、信息论与编码、人工智能算法基础、复变函数与积分变换、数字信号处理、电磁场理论、计算机程序设计等
@@ -49,7 +51,6 @@ title: 范坤鹏的个人主页
   <img src="https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white">
   <img src="https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white">
   <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white">
-
 </p>
 
 ### 嵌入式控制
