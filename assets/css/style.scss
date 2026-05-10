@@ -15,15 +15,17 @@
   /* 调整内边距，如果你觉得顶部太高或太矮可以调这两个值 */
   padding: 5rem 6rem;
 }
-// 2. 正文区域字体加深
+// 2. 正文区域：采用护眼的深炭灰色
 .main-content {
-  color: #111 !important; // 将默认的深灰色改为接近纯黑色
-  line-height: 1.6;
+  color: #333333 !important; // 标准阅读深灰色，比纯黑柔和
+  line-height: 1.7; // 稍微增加行间距，让排版有呼吸感
+  font-size: 1.05rem; // 稍微放大一点点字体
   
-  // 加深所有标题的颜色
-  h1, h2, h3, h4, h5, h6 {
-    color: #000 !important; // 标题改为纯黑
-    font-weight: bold !important;
+  // 标题颜色：深灰色，不刺眼
+  h1, h2, h3, h4 {
+    color: #222222 !important; 
+    border-bottom: 1px solid #eee; // 给标题加一个非常淡的分隔线，增加层次感
+    padding-bottom: 0.3rem;
   }
 
   // 加深列表和段落文字
