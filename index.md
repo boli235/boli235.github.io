@@ -6,14 +6,14 @@ title: 范坤鹏的个人主页
 # 你好，我是范坤鹏
 
 ## 基本信息
-
+<img src="../me.jpg" width="160" align="right" style="margin-left: 20px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
 - **姓名**: 范坤鹏
 - **生日**: 2005-6-24
 - **联系方式**:
   - QQ:2964924015
   - 微信：qq2964924015
   - 邮箱：2023112091@my.swjtu.edu.cn
-
+<div style="clear: both;"></div>
 ---
 
 ##  我的教育背景——西南交通大学 \| 通信工程 \| 本科（2023.09 - 至今）
