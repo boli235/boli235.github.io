@@ -14,16 +14,14 @@ title: 范坤鹏的个人主页
   - QQ:2964924015
   - 微信：qq2964924015
   - 邮箱：2023112091@my.swjtu.edu.cn
-
 <br>
 
  ## 🎓我的教育背景
 - **西南交通大学** | 通信工程 | 本科（2023.09 - 至今）
 - **核心数据（前五学期）**: 
-  - 课程均分: 91.44
-  - 绩点: 3.78
-  - 专业排名: 8/137
-- **相关证书**: 英语四级: 540 | 英语六级：464 | 计算机二级：优秀（C语言）
+  - 课程均分: 91.44 | 绩点: 3.78 | 专业排名: 8/137
+- **相关证书**:
+  - 英语四级: 540 | 英语六级：464 | 计算机二级：优秀（C语言）
 - **主修课程**: 嵌入式系统设计与应用、模拟电子技术、数字电子技术、电路分析、电子系统设计与实践、计算机组成原理、计算机网络、信号与系统、信息论与编码、人工智能算法基础、复变函数与积分变换、数字信号处理、电磁场理论、计算机程序设计等
 - **研究兴趣**: 
   - 智能机器人与群体智能系统 | 机器人控制技术 | 机器人集群协同控制 | 嵌入式系统
@@ -40,6 +38,35 @@ title: 范坤鹏的个人主页
 - **工程实践能力**：积极投身于机器人控制领域的各类高水平竞赛与科研项目，积累了丰富的工程调试经验；
 - **抗压与解决问题能力**：具备在压力环境下独立分析并解决复杂工程问题的能力，能够快速适应高强度的科研节奏。
 <br>
+## 🛠️ 核心技能
+
+### 编程语言
+<p>
+  <img src="https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white">
+  <img src="https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white">
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white">
+
+</p>
+
+### 嵌入式控制
+<p>
+  <img src="https://img.shields.io/badge/STM32-03234B?style=for-the-badge&logo=stmicroelectronics&logoColor=white">
+  <img src="https://img.shields.io/badge/FPGA-792B48?style=for-the-badge&logo=xilinx&logoColor=white">
+  <img src="https://img.shields.io/badge/ESP32-E65282?style=for-the-badge&logo=espressif&logoColor=white">
+  <img src="https://img.shields.io/badge/FreeRTOS-00A9E0?style=for-the-badge&logo=freertos&logoColor=white">
+</p>
+
+### 工具与工程
+<p>
+  <img src="https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white">
+  <img src="https://img.shields.io/badge/Keil5-487625?style=for-the-badge&logo=arm&logoColor=white">
+  <img src="https://img.shields.io/badge/CLion-143157?style=for-the-badge&logo=clion&logoColor=white">
+  <img src="https://img.shields.io/badge/MATLAB-ED7123?style=for-the-badge&logo=matlab&logoColor=white">
+  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white">
+  <img src="https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white">
+  <img src="https://img.shields.io/badge/嘉立创-1C77E8?style=for-the-badge&logo=microchip&logoColor=white">
+</p>
+
 ## 科研项目
 -✨ [项目名称 1](https://github.com/仓库地址)
   - 简要描述：
