@@ -1,0 +1,25 @@
+---
+---
+@import "{{ site.theme }}";
+
+// 修改顶部背景
+.page-header {
+  /* 使用 linear-gradient 在图片上盖一层半透明黑影，确保白色文字清晰可见 */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("header-bg.jpg");
+  
+  /* 让图片铺满整个区域 */
+  background-size: cover;
+  
+  /* 让图片中心对齐（这样裁剪时会保留中间部分） */
+  background-position: center;
+  
+  /* 调整内边距，如果你觉得顶部太高或太矮可以调这两个值 */
+  padding: 5rem 6rem;
+}
+
+// 调整移动端适配（可选）
+@media screen and (max-width: 640px) {
+  .page-header {
+    padding: 2rem 1rem;
+  }
+}
