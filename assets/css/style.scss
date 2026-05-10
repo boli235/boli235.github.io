@@ -15,6 +15,28 @@
   /* 调整内边距，如果你觉得顶部太高或太矮可以调这两个值 */
   padding: 5rem 6rem;
 }
+// 2. 正文区域字体加深
+.main-content {
+  color: #111 !important; // 将默认的深灰色改为接近纯黑色
+  line-height: 1.6;
+  
+  // 加深所有标题的颜色
+  h1, h2, h3, h4, h5, h6 {
+    color: #000 !important; // 标题改为纯黑
+    font-weight: bold !important;
+  }
+
+  // 加深列表和段落文字
+  p, li {
+    color: #1a1a1a !important; 
+  }
+
+  // 让加粗的文字更黑
+  strong {
+    color: #000 !important;
+  }
+}
+
 
 // 调整移动端适配（可选）
 @media screen and (max-width: 640px) {
