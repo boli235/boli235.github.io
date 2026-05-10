@@ -38,7 +38,14 @@
     color: #000 !important;
   }
 }
-
+  // 表格文字颜色同步
+  table {
+    color: #333333 !important;
+    th {
+      background-color: #f8f9fa; // 给表头一个淡淡的底色，区分内容
+    }
+  }
+}
 
 // 调整移动端适配（可选）
 @media screen and (max-width: 640px) {
