@@ -86,7 +86,7 @@ title: 范坤鹏的个人主页
 
 ---
 
-## 科研项目
+## 科创项目
 -✨ **[第二十四届全国大学生机器人大赛ROBOCON]**
 <p align="center">
   <img src="../25RC合影.jpg" alt="合影照片" width="400"/>
