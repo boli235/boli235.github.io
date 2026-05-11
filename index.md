@@ -117,9 +117,10 @@ title: 范坤鹏的个人主页
 
 -✨ **[全国大学生创新年会 “球类辅助训练与物资运送一体化机器人” ]**
 <div style="display: flex; justify-content: center; gap: 10px;">
-  <img src="../创新年会合影.jpg" alt="创新年会合影" style="width: 40%; border-radius: 5px;">
-  <img src="../创新年会.jpg" alt="创新年会" style="width: 40%; border-radius: 5px;">
+      <img src="创新年会合影.jpg" alt="合影" style="width: 40%; height: 250px; object-fit: cover; border-radius: 5px;">
+      <img src="创新年会.jpg" alt="合影" style="width: 40%; height: 250px; object-fit: cover; border-radius: 5px;">
 </div>
+
   - 简要描述：针对多任务体育训练场景，研发了一款集全向移动、自动拾发球与物资转运于一体的复合机器人。系统集成“麦轮拾球+摩擦轮发射”机构与双二自由度夹爪，实现了足球高效采集与物资自动化转运。
   - 本人工作：
     - 任务调度与逻辑开发：基于**状态机思想**设计多机构协同调度逻辑，有效解决了拾球、抓取、转运等多个动作间的时序冲突与物理干涉。
