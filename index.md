@@ -110,7 +110,7 @@ title: 范坤鹏的个人主页
       <img src="SRTP机器人.png" alt="SRTP机器人" width="300"/>
     </td>
     <td align="center">
-      <img src="R2投篮.gif" alt="R2投篮演示" width="300"/>
+      <img src="../R2投篮.gif" alt="R2投篮演示" width="300"/>
     </td>
   </tr>
 </table>
