@@ -213,11 +213,11 @@ title: 范坤鹏的个人主页
   <tr>
     <!-- 左侧：核心概览 -->
     <td width="60%" valign="top">
-      <!-- 身份标识框 -->
+<!-- 身份标识框：使用亮绿色背景 -->
       <table border="0" cellpadding="0" cellspacing="0">
         <tr>
-          <td bgcolor="#444" style="padding: 5px 15px; border-radius: 4px;">
-            <font color="#fff"><b>项目职责：电控负责人 (Control Lead)</b></font>
+          <td bgcolor="#4cc141" style="padding: 5px 15px; border-radius: 4px;">
+            <font color="#fff"><b>项目职责：电控组长 (Control Lead)</b></font>
           </td>
         </tr>
       </table>
