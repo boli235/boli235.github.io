@@ -211,8 +211,8 @@ title: 范坤鹏的个人主页
 <table border="0" width="100%">
   <!-- 上半部分：图文并排区 -->
   <tr>
-    <!-- 左侧：核心概览 -->
-    <td width="60%" valign="top">
+    <!-- 关键修改：加入 word-break: break-all 解决换行空白问题 -->
+    <td width="60%" valign="top" style="word-break: break-all;">
       <!-- 身份标识框 -->
       <table border="0" cellpadding="0" cellspacing="0">
         <tr>
@@ -221,7 +221,7 @@ title: 范坤鹏的个人主页
           </td>
         </tr>
       </table>
-      <b>项目描述：</b> 集全向高速底盘、高精度传射机构与分布式控制系统于一体的高度自主协同机器人。<br><br>
+      <b>项目描述：</b>集全向高速底盘、高精度传射机构与分布式控制系统于一体的高度自主协同机器人。<br><br>
       <h4>核心工作概览</h4>
       <ul>
         <li>基于 <b>STM32</b> 的分布式架构，调度 10 枚异构电机，实现高带宽响应。</li>
@@ -252,7 +252,8 @@ title: 范坤鹏的个人主页
         
         <table border="0" width="100%" bgcolor="#f3f4f5">
           <tr>
-            <td style="padding: 15px;">
+            <!-- 同样加入 word-break 防止详情页换行问题 -->
+            <td style="padding: 15px; word-break: break-all;">
               <br>
               <b>❓ 需求背景 (Why)</b><br>
               根据比赛规则，机器人需具备远距离（三分线外半场线内）的投射能力与高动态防御能力。机器人既要拥有较高身形以应对拦截<b>(但这会导致高重心)</b>，又要具备<b>高能射击系统</b>以实现远程投射。
