@@ -206,8 +206,7 @@ title: 范坤鹏的个人主页
   </tr>
 </table>
 
-### 🚀 01. ROBOCON 赛季机器人：高度自主协同系统
-
+### 🚀 01. 第二十四届全国大学生机器人大赛 ROBOCON
 <table border="0">
   <tr>
     <!-- 左侧：文字内容区 -->
@@ -219,11 +218,10 @@ title: 范坤鹏的个人主页
       </p>
       <h4>核心工作概览</h4>
       <ul>
-        <li>基于 <b>STM32</b> 的分布式架构，调度 10 枚异构电机，实现高带宽响应。</li>
-        <li>构建基于 <b>环形缓冲队列</b> 的异步数据流框架，消除通信延迟与丢包。</li>
-        <li>利用 <b>VESC</b> 高频采样实现摩擦轮转速精准闭环，支撑三分线远距离投射。</li>
+        <li>基于 <b>STM32</b> 的分布式架构，调度 10 枚异构电机，实现底层高带宽响应。</li>
+        <li>构建基于 <b>环形缓冲队列</b> 的异步数据流框架，解决了高频通信下的粘包与数据延迟。</li>
+        <li>利用 <b>VESC</b> 高频采样特性实现摩擦轮精准闭环，支撑全自动远距离三分投射。</li>
       </ul>
-      <!-- 点击展开区域：加深背景颜色 -->
       <details>
         <summary>📑 <b>点击展开查看硬核技术逻辑 (Why-How-What)</b></summary>
         <table border="0">
@@ -231,7 +229,7 @@ title: 范坤鹏的个人主页
             <td bgcolor="#f3f4f5">
               <br>
               <b>❓ Why（需求背景）</b><br>
-              赛场要求机器人具备远距离（三分线外）投射与高动态防御能力。这要求机器人既要拥有<b>高重心物理结构</b>以应对拦截，又要具备<b>高功率密度射击系统</b>。
+              赛场要求机器人具备远距离投射与高动态防御能力。这要求机器人既要拥有<b>高重心物理结构</b>以应对拦截，又要具备<b>高功率密度射击系统</b>。
               <br><br>
               <b>⚠️ How（核心挑战）</b><br>
               1. <b>动力学失稳：</b> 高重心结构在 3m/s 启停瞬间产生巨大惯性，导致底盘“翘头”震荡。<br>
@@ -243,23 +241,130 @@ title: 范坤鹏的个人主页
               <b>🛠️ What（三位一体解决方案）</b><br>
               - <b>模型层：</b> 采用<b>斜坡规划算法</b>平滑加速度，配合前馈 PID，路径误差控制在 2cm 内。<br>
               - <b>系统层：</b> 采用 <b>VESC 电调</b>驱动无刷电机，实现毫秒级转速闭环，确保高速带球瞬间转速稳定。<br>
-              - <b>数据层：</b> 构建<b>异步数据框架</b>，实现多源数据时间戳对齐，解决复杂环境下的定位失效。
+              - <b>数据层：</b> 构建<b>异步数据框架</b>，实现多源异构数据解耦与时间戳对齐。
               <br><br>
               <b>📈 So what（价值总结）</b><br>
-              凭借全栈自研控制系统，斩获 <b>ROBOCON 全国一等奖</b>。该“高动态底盘+高精度射击”范式可直接应用于无人化体育训练及工业移动作业机器人。
+              斩获 ROBOCON 全国一等奖。该“高动态底盘+高精度射击”范式可直接转化为高性能移动作业机器人、无人化体育训练设备等工业与民用领域。
               <br>
             </td>
           </tr>
         </table>
       </details>
     </td>
-    <!-- 右侧：图片展示区 (固定宽度，防止上下跳动) -->
+    <!-- 右侧：图片展示区 -->
     <td width="40%" valign="top" align="center">
       <img src="25RC合影.jpg" width="100%" style="border-radius:8px; border:1px solid #eee;" />
       <p><sub><i>团队合影</i></sub></p>
       <img src="川大VS西南交.png" width="100%" style="border-radius:8px; border:1px solid #eee;" />
-      <p><sub><i>高动态对战现场</i></sub></p>
+      <p><sub><i>高动态对战现场演示</i></sub></p>
+    </td>
+  </tr>
+</table>
 
+<br>
+
+### 🏀 02. 国家级大创：基于矢量底盘的多功能篮球机器人
+<table border="0">
+  <tr>
+    <td width="60%" valign="top">
+      <p align="left">
+        <img src="https://img.shields.io/badge/级别-国家级重点-red?style=flat-square" />
+        <img src="https://img.shields.io/badge/技术-舵轮矢量控制-blueviolet?style=flat-square" />
+        <img src="https://img.shields.io/badge/算法-非线性拟合-yellow?style=flat-square" />
+      </p>
+      <h4>核心工作概览</h4>
+      <ul>
+        <li>研发基于四个独立转向/驱动单元的<b>舵轮矢量底盘</b>，实现全向机动。</li>
+        <li>设计由真空泵、储气罐及电磁阀组成的<b>多级气路系统</b>，模拟动态“拍球”。</li>
+        <li>建立基于<b>非线性拟合</b>的抛射轨迹模型，解决变距离目标的精准自适应打击。</li>
+      </ul>
+      <details>
+        <summary>📑 <b>点击展开查看硬核技术逻辑 (Why-How-What)</b></summary>
+        <table border="0">
+          <tr>
+            <td bgcolor="#f3f4f5">
+              <br>
+              <b>❓ Why（需求背景）</b><br>
+              针对体育数字化训练需求，需要一款能模拟运动员滑步、自动运球并根据距离自适应投篮的智能终端。
+              <br><br>
+              <b>⚠️ How（核心挑战）</b><br>
+              1. <b>全向机动性：</b> 如何在有限空间内实现比麦轮负载更高、控制更灵活的矢量移动。<br>
+              2. <b>时序耦合：</b> “拍球”动作涉及气动吸附与机械弹射的严格时序配合，微秒级误差即导致球权丢失。
+              <br><br>
+              <b>👁️ Observation（核心洞察）</b><br>
+              体育机器人的核心在于<b>“柔性动作的刚性实现”</b>。即通过精确的数学模型（轨迹拟合）和严格的状态机逻辑，去复现运动员的模糊直觉。
+              <br><br>
+              <b>🛠️ What（三位一体解决方案）</b><br>
+              - <b>底盘层：</b> 构建底盘<b>逆运动学解算</b>，融合 3D 激光雷达与码盘数据实现高精度室内定位。<br>
+              - <b>逻辑层：</b> 基于<b>有限状态机 (FSM)</b> 构建气路执行策略，严格匹配吸附-释放的周期。<br>
+              - <b>数学层：</b> 通过多距离采样与曲线拟合，建立<b>弹簧蓄力位移与真实距离</b>的数学映射。
+              <br><br>
+              <b>📈 So what（价值总结）</b><br>
+              该项目以“优秀”等级结题，为体育数字化提供了高集成度的硬件方案，相关矢量控制算法已应用至实验室其他复合移动平台。
+              <br>
+            </td>
+          </tr>
+        </table>
+      </details>
+    </td>
+    <td width="40%" valign="top" align="center">
+      <img src="SRTP机器人.png" width="100%" style="border-radius:8px; border:1px solid #eee;" />
+      <p><sub><i>SRTP 机器人结构设计</i></sub></p>
+      <img src="../R2投篮.gif" width="100%" style="border-radius:8px; border:1px solid #eee;" />
+      <p><sub><i>自适应距离精准投篮演示</i></sub></p>
+    </td>
+  </tr>
+</table>
+
+<br>
+
+### 📦 03. 全国大学生创新年会：球类辅助训练与物资运送一体化机器人
+<table border="0">
+  <tr>
+    <td width="60%" valign="top">
+      <p align="left">
+        <img src="https://img.shields.io/badge/展示-国创年会-blue?style=flat-square" />
+        <img src="https://img.shields.io/badge/逻辑-FSM%20状态机-lightgrey?style=flat-square" />
+      </p>
+      <h4>核心工作概览</h4>
+      <ul>
+        <li>设计多机构协同调度逻辑，解决了拾球、抓取、转运间的<b>物理干涉</b>。</li>
+        <li>负责二自由度夹爪驱动及射球<b>差速控制算法</b>，实现足球高效采集与转运。</li>
+        <li>优化麦轮分力特性，提升了机器人在狭窄场地下的路径执行连贯性。</li>
+      </ul>
+      <details>
+        <summary>📑 <b>点击展开查看硬核技术逻辑 (Why-How-What)</b></summary>
+        <table border="0">
+          <tr>
+            <td bgcolor="#f3f4f5">
+              <br>
+              <b>❓ Why（需求背景）</b><br>
+              多任务体育场景（如足球训练）要求机器人在负责训练辅助的同时，兼顾器材的自动化采集与物资转运。
+              <br><br>
+              <b>⚠️ How（核心挑战）</b><br>
+              1. <b>机构耦合：</b> 拾球机构与物资夹爪在同一空间内工作，容易发生机械碰撞。<br>
+              2. <b>效率瓶颈：</b> 如何保证拾球、存球、发球等动作序列的无缝衔接。
+              <br><br>
+              <b>👁️ Observation（核心洞察）</b><br>
+              多任务协同的关键在于<b>“资源互斥与状态解耦”</b>。通过逻辑上的状态机隔离，确保同一时间只有一个执行机构拥有底盘或空间的优先权。
+              <br><br>
+              <b>🛠️ What（解决方案）</b><br>
+              - <b>调度层：</b> 基于<b>状态机思想</b>设计调度逻辑，实现拾、抓、运任务的自动切换。<br>
+              - <b>执行层：</b> 优化麦克纳姆轮<b>分力补偿算法</b>，确保拨球入笼时的稳定性。
+              <br><br>
+              <b>📈 So what（价值总结）</b><br>
+              项目成功入选全国大学生创新年会成果展示，验证了多任务机器人在体育辅助领域的广泛应用前景。
+              <br>
+            </td>
+          </tr>
+        </table>
+      </details>
+    </td>
+    <td width="40%" valign="top" align="center">
+      <img src="../创新年会合影.jpg" width="100%" style="border-radius:8px; border:1px solid #eee;" />
+      <p><sub><i>团队年会现场展示合影</i></sub></p>
+      <img src="../创新年会.jpg" width="100%" style="border-radius:8px; border:1px solid #eee;" />
+      <p><sub><i>复合机器人实物展示</i></sub></p>
     </td>
   </tr>
 </table>
