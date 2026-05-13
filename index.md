@@ -85,6 +85,81 @@ title: 范坤鹏的个人主页
 </p>
 
 ---
+### 🛠 科创项目展示
+
+<table width="100%">
+  <tr>
+    <td bgcolor="#f8f9fa">
+      <br>
+      <h3 align="center">✨ 第二十四届全国大学生机器人大赛 ROBOCON</h3>
+      <p align="center">
+        <img src="25RC合影.jpg" width="45%" />
+        <img src="川大VS西南交.png" width="45%" />
+      </p>
+      <hr>
+      <h4>📝 项目核心：高度自主协同机器人系统</h4>
+      <ul>
+        <li><b>分布式架构：</b>基于 STM32 + CAN 总线调度 10 枚异构电机，控制周期 1ms。</li>
+        <li><b>高频定位：</b>插值算法融合码盘与激光雷达，全空间定位偏差 < 2cm。</li>
+        <li><b>高动态射击：</b>VESC 电调闭环控制摩擦轮，实现高频率、高精度投射。</li>
+      </ul>
+      <details>
+        <summary>🔍 <b>点击展开查看硬核技术细节 (代码/算法)</b></summary>
+        <br>
+        <blockquote>
+          <b>1. 路径跟踪补偿算法：</b><br>
+          在 3m/s 高速移动下，通过 IMU 实时解算姿态并进行前馈补偿，公式：<code>Output = Kp*e + Ki*∫e + Kd*de + Kv*V_ref</code><br><br>
+          <b>2. 异步数据流框架：</b><br>
+          采用环形缓冲队列处理传感器数据，解决了高频通信下的粘包问题。
+        </blockquote>
+      </details>
+      <br>
+    </td>
+  </tr>
+</table>
+
+<br>
+
+<table width="100%">
+  <tr>
+    <td bgcolor="#f8f9fa">
+      <br>
+      <h3 align="center">✨ 国家级大创项目：基于矢量底盘的篮球训练机器人</h3>
+      <p align="center">
+        <img src="SRTP机器人.png" width="40%" />
+        <img src="../R2投篮.gif" width="40%" />
+      </p>
+      <hr>
+      <h4>📝 项目核心：全向机动与自适应投射</h4>
+      <ul>
+        <li><b>舵轮矢量底盘：</b>四独立转向驱动单元，逆运动学解算实现任意方向平移旋转。</li>
+        <li><b>多级气路系统：</b>真空泵+储气罐+有限状态机，精准模拟“拍球”动态时序。</li>
+        <li><b>非线性轨迹拟合：</b>多采样点拟合弹簧蓄力与距离的数学模型，实现全场自适应投篮。</li>
+      </ul>
+    </td>
+  </tr>
+</table>
+
+<br>
+
+<table width="100%">
+  <tr>
+    <td bgcolor="#f8f9fa">
+      <br>
+      <h3 align="center">✨ 全国大学生创新年会：球类辅助训练与物资运送机器人</h3>
+      <p align="center">
+        <img src="../创新年会合影.jpg" width="45%" />
+        <img src="../创新年会.jpg" width="45%" />
+      </p>
+      <hr>
+      <h4>📝 项目核心：多任务协同与自动化转运</h4>
+      <ul>
+        <li><b>状态机逻辑：</b>设计多机构调度逻辑，解决拾球、抓取、转运间的物理干涉。</li>
+        <li><b>执行机构优化：</b>二自由度夹爪驱动与麦轮拾球差速控制，提升采集效率。</li>
+      </ul>
+    </td>
+  </tr>
+</table>
 
 ## 科创项目
 -✨ **[第二十四届全国大学生机器人大赛ROBOCON]**
