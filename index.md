@@ -246,7 +246,7 @@ title: 范坤鹏的个人主页
           文字颜色设置为深蓝色 #0366d6。
         -->
         <summary style="display: list-item; cursor: pointer; padding: 12px; background-color: #f6f8fa; border-radius: 6px; outline: none; color: #0366d6;">
-          <b>展开查看硬核技术逻辑 (Why-How-What)</b>
+          <b>问题提出与突破 (Why-How-What)</b>
         </summary>
         
         <table border="0" width="100%" bgcolor="#f3f4f5">
