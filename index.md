@@ -159,20 +159,33 @@ title: 范坤鹏的个人主页
 <br>
 
 ### 🏀 02. 国家级大创：基于矢量底盘的篮球机器人
-<table border="0">
+<table border="0" width="100%">
+  <!-- 上半部分：图文并排区 -->
   <tr>
-    <td width="45%" align="center">
+    <!-- 左侧：图片/GIF区 (垂直居中) -->
+    <td width="45%" align="center" valign="middle">
       <img src="../R2投篮.gif" width="100%" style="border-radius:10px; border: 1px solid #ddd;" />
-      <br><sub><i>机器人自主抛射演示</i></sub>
+      <br><sub><i>R2 机器人自主抛射演示</i></sub>
     </td>
-    <td width="55%" valign="top">
-      <p align="left">
-        <img src="https://img.shields.io/badge/级别-国家级重点-red" />
-        <img src="https://img.shields.io/badge/底盘-4舵轮矢量-blueviolet" />
-        <img src="https://img.shields.io/badge/算法-非线性拟合-yellow" />
-      </p>
-      <b>项目描述：</b> 自主研制集全向高机动位移、主动吸附运球、高精度抛射于一体的智能机器人。<br><br>
-      <b>核心贡献：</b>
+    
+    <!-- 右侧：概览文字区 (垂直靠顶) -->
+    <td width="55%" valign="top" style="word-break: break-all; padding-left: 10px;">
+      
+      <!-- 关键：使用 align="right" 强制浮动到最右上角 -->
+      <table border="0" cellpadding="0" cellspacing="0" align="right" style="margin-left: 10px; margin-bottom: 5px;">
+        <tr>
+          <td bgcolor="#555555" style="padding: 4px 12px; border-radius: 4px;">
+            <font color="#ffffff" size="2"><b>项目职责：电控负责人</b></font>
+          </td>
+        </tr>
+      </table>
+      
+      <!-- 文字内容直接紧跟其后 -->
+      <div style="display: inline;">
+        <b>项目描述：</b>自主研制集全向高机动位移、主动吸附运球、高精度抛射于一体的智能机器人。
+      </div>
+      
+      <h4 style="margin-top: 15px;">核心贡献：</h4>
       <ul>
         <li><b>矢量底盘建模：</b> 独立转向驱动单元的逆运动学解算，实现全向机动。</li>
         <li><b>气动耦合控制：</b> 精确时序策略控制真空泵与电磁阀，实现高可靠“拍球”。</li>
@@ -180,9 +193,6 @@ title: 范坤鹏的个人主页
       </ul>
     </td>
   </tr>
-</table>
-
-<br>
 
 ### 📦 03. 创新年会：球类辅助与物资转运机器人
 <table border="0">
