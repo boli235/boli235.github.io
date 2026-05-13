@@ -213,14 +213,19 @@ title: 范坤鹏的个人主页
   <tr>
     <!-- 左侧：核心概览 -->
     <td width="60%" valign="top">
-      <p align="left">
-        <img src="https://img.shields.io/badge/定位精度-±2cm-brightgreen?style=flat-square" />
-        <img src="https://img.shields.io/badge/控制周期-1ms-blue?style=flat-square" />
-        <img src="https://img.shields.io/badge/硬件驱动-VESC%20BLDC-orange?style=flat-square" />
-      </p>
+      <!-- 身份标识框 -->
+      <table border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td bgcolor="#444" style="padding: 5px 15px; border-radius: 4px;">
+            <font color="#fff"><b>项目职责：电控负责人 (Control Lead)</b></font>
+          </td>
+        </tr>
+      </table>
+      <br>
       <h4>核心工作概览</h4>
       <ul>
         <li>基于 <b>STM32</b> 的分布式架构，调度 10 枚异构电机，实现高带宽响应。</li>
+        <li>基于 完成 <b>四全向轮底盘逆运动学解算</b>，实现高动态下的平移、旋转及复合运动控制。</li>
         <li>构建基于 <b>环形缓冲队列</b> 的异步数据流框架，消除通信延迟与丢包。</li>
         <li>利用 <b>VESC</b> 高频采样实现摩擦轮转速精准闭环，支撑三分线远距离投射。</li>
       </ul>
