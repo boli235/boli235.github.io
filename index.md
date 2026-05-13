@@ -216,8 +216,8 @@ title: 范坤鹏的个人主页
       <!-- 身份标识框 -->
       <table border="0" cellpadding="0" cellspacing="0">
         <tr>
-          <td bgcolor="#e0e0e0" style="padding: 5px 15px; border-radius: 4px;">
-            <font color="#e0e0e0"><b>项目职责：电控组长</b></font>
+          <td bgcolor="#555555" style="padding: 5px 15px; border-radius: 4px;">
+            <font color="#fffff"><b>项目职责：电控组长</b></font>
           </td>
         </tr>
       </table>
@@ -236,7 +236,7 @@ title: 范坤鹏的个人主页
     </td>
   </tr>
 
- <!-- 下半部分：硬核技术逻辑 (使用原生动态三角形) -->
+ <!-- 下半部分：技术逻辑 (使用原生动态三角形) -->
   <tr>
     <td colspan="2">
       <details>
@@ -265,7 +265,79 @@ title: 范坤鹏的个人主页
               高动态性能的本质是<b>“系统加速度的平滑性”与“响应的确定性”</b>。必须通过运动学规划消除瞬时冲击力，通过高性能驱动器保证执行精度，并通过异步架构加固数据链路。
               <br><br>
               <b>💡 提出方法 (What)</b><br>
+              - <b>模型层：</b> 采用<b>斜坡### 🚀 01. 第二十四届全国大学生机器人大赛 ROBOCON
+
+<table border="0" width="100%">
+  <!-- 上半部分：图文并排区 -->
+  <tr>
+    <!-- 左侧：核心概览 -->
+    <td width="60%" valign="top">
+      <!-- 身份标识框 -->
+      <table border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td bgcolor="#555555" style="padding: 5px 15px; border-radius: 4px;">
+            <font color="#fffff"><b>项目职责：电控组长</b></font>
+          </td>
+        </tr>
+      </table>
+      <h4>核心工作概览</h4>
+      <ul>
+        <li>基于 <b>STM32</b> 的分布式架构，调度 10 枚异构电机，实现高带宽响应。</li>
+        <li>基于 完成 <b>四全向轮底盘逆运动学解算</b>，实现高动态下的平移、旋转及复合运动控制。</li>
+        <li>构建基于 <b>环形缓冲队列</b> 的异步数据流框架，消除通信延迟与丢包。</li>
+        <li>利用 <b>VESC</b> 高频采样实现摩擦轮转速精准闭环，支撑三分线远距离投射。</li>
+      </ul>
+    </td>
+    <!-- 右侧：图片区 -->
+    <td width="40%" valign="top" align="center">
+      <img src="25RC合影.jpg" width="100%" style="border-radius:8px; border:1px solid #eee;" />
+      <img src="川大VS西南交.png" width="100%" style="border-radius:8px; border:1px solid #eee; margin-top:8px;" />
+    </td>
+  </tr>
+
+ <!-- 下半部分：技术逻辑 (使用原生动态三角形) -->
+  <tr>
+    <td colspan="2">
+      <details>
+        <!-- 
+          重点：通过 display: list-item 强制显示系统三角形。
+          不手动添加 ▶，这样系统三角形旋转时就不会有另一个符号在旁边碍眼。
+          文字颜色设置为深蓝色 #0366d6。
+        -->
+        <summary style="display: list-item; cursor: pointer; padding: 12px; background-color: #f6f8fa; border-radius: 6px; outline: none;">
+          <font color="#0366d6"><b>展开查看硬核技术逻辑 (Why-How-What)</b></font>
+        </summary>
+        
+        <table border="0" width="100%" bgcolor="#f3f4f5">
+          <tr>
+            <td style="padding: 15px;">
+              <br>
+              <b>❓ 需求背景 (Why)</b><br>
+              根据比赛规则，机器人需具备远距离（三分线外半场线内）的投射能力与高动态防御能力。机器人既要拥有较高身形以应对拦截<b>(但这会导致高重心)</b>，又要具备<b>高能射击系统</b>以实现远程打击。
+              <br><br>
+              <b>⚠️ 挖掘问题 (How)</b><br>
+              1. <b>动力学失稳：</b> 高重心结构导致机器人在高速运动启停瞬间会产生巨大惯性力矩，导致底盘“翘头”震荡与停止过冲。<br>
+              2. <b>射击一致性：</b> 远距离投射要求摩擦轮电机有极高且稳定的转速，传统电调在负载突变时落点漂移严重，无法保证重复落点精度。<br>
+              3. <b>通信可靠性：</b> 赛场电磁环境复杂，传感器串行数据流易出现粘包及丢包现象，破坏控制闭环。
+              <br><br>
+              <b>🤔 理论分析 (Observation)</b><br>
+              高动态性能的本质是<b>“系统加速度的平滑性”与“响应的确定性”</b>。必须通过运动学规划消除瞬时冲击力，通过高性能驱动器保证执行精度，并通过异步架构加固数据链路。
+              <br><br>
+              <b>💡 提出方法 (What)</b><br>
               - <b>模型层：</b> 采用<b>斜坡规划算法 (Ramp Planning)</b> 平滑加速度曲线，配合<b>含前馈的PID</b>，从源头抑制翘头现象并提高响应速度，提升机器人高动态移动稳定性。<br>
+              - <b>系统层：</b> 摩擦轮采用 <b>VESC 电调</b>驱动无刷电机方案，实现毫秒级转速闭环控制，确保篮球出射速度及角度保持平稳及一致性。<br>
+              - <b>数据层：</b> 构建<b>环形缓冲队列异步数据流框架</b>，实现多源异构数据解耦与时间戳对齐，解决了复杂环境下的定位失效问题。
+              <br><br>
+              <b>📈 价值总结 (So what)</b><br>
+              凭借全栈自研的稳健控制系统， <b>机器人实现全向稳定自由移动</b>。项目已形成一套“高动态底盘+高精度射击”的控制方案，可直接转化应用于高性能移动作业机器人等领域。
+              <br>
+            </td>
+          </tr>
+        </table>
+      </details>
+    </td>
+  </tr>
+</table>规划算法 (Ramp Planning)</b> 平滑加速度曲线，配合<b>含前馈的PID</b>，从源头抑制翘头现象并提高响应速度，提升机器人高动态移动稳定性。<br>
               - <b>系统层：</b> 摩擦轮采用 <b>VESC 电调</b>驱动无刷电机方案，实现毫秒级转速闭环控制，确保篮球出射速度及角度保持平稳及一致性。<br>
               - <b>数据层：</b> 构建<b>环形缓冲队列异步数据流框架</b>，实现多源异构数据解耦与时间戳对齐，解决了复杂环境下的定位失效问题。
               <br><br>
