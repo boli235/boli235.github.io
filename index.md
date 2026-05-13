@@ -259,7 +259,7 @@ title: 范坤鹏的个人主页
       <p><sub><i>团队合影</i></sub></p>
       <img src="川大VS西南交.png" width="100%" style="border-radius:8px; border:1px solid #eee;" />
       <p><sub><i>高动态对战现场</i></sub></p>
-      <img src="https://img.shields.io/badge/🏆-National%20First%20Prize-gold" />
+
     </td>
   </tr>
 </table>
