@@ -214,7 +214,7 @@ title: 范坤鹏的个人主页
     <!-- 关键修改：加入 word-break: break-all 解决换行空白问题 -->
     <td width="60%" valign="top" style="word-break: break-all;">
       <!-- 身份标识框 -->
-      <table border="0" cellpadding="0" cellspacing="0">
+      <table border="0" cellpadding="0" cellspacing="0" style="margin-bottom: 15px;">
         <tr>
           <td bgcolor="#555555" style="padding: 5px 15px; border-radius: 4px;">
             <font color="#fffff"><b>项目职责：电控组长</b></font>
