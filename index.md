@@ -163,7 +163,7 @@ title: 范坤鹏的个人主页
   <tr>
     <td width="45%" align="center">
       <img src="../R2投篮.gif" width="100%" style="border-radius:10px; border: 1px solid #ddd;" />
-      <br><sub><i>R2 机器人自主抛射演示</i></sub>
+      <br><sub><i>机器人自主抛射演示</i></sub>
     </td>
     <td width="55%" valign="top">
       <p align="left">
