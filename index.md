@@ -209,8 +209,9 @@ title: 范坤鹏的个人主页
 ### 🚀 01. 第二十四届全国大学生机器人大赛 ROBOCON
 
 <table border="0" width="100%">
-  <!-- 上半部分：图文并排区 (60/40 分布) -->
+  <!-- 上半部分：图文并排区 -->
   <tr>
+    <!-- 左侧：核心概览 -->
     <td width="60%" valign="top">
       <p align="left">
         <img src="https://img.shields.io/badge/定位精度-±2cm-brightgreen?style=flat-square" />
@@ -219,60 +220,52 @@ title: 范坤鹏的个人主页
       </p>
       <h4>核心工作概览</h4>
       <ul>
-        <li>基于 <b>STM32</b> 分布式架构，调度 10 枚异构电机，实现高带宽响应。</li>
-        <li>构建 <b>环形缓冲队列</b> 异步数据流框架，消除高频通信下的延迟与丢包。</li>
-        <li>利用 <b>VESC</b> 实现毫秒级转速闭环，支撑全自动三分远射精准打击。</li>
+        <li>基于 <b>STM32</b> 的分布式架构，调度 10 枚异构电机，实现高带宽响应。</li>
+        <li>构建基于 <b>环形缓冲队列</b> 的异步数据流框架，消除通信延迟与丢包。</li>
+        <li>利用 <b>VESC</b> 高频采样实现摩擦轮转速精准闭环，支撑三分线远距离投射。</li>
       </ul>
     </td>
+    <!-- 右侧：图片区 -->
     <td width="40%" valign="top" align="center">
-      <!-- 【图片框】默认开启。如果你想看技术逻辑，可以随手点一下收起它 -->
-      <details open>
-        <summary style="cursor: pointer; color: #0366d6; display: list-item;"> 
-          📸 <b>项目实物演示 (点击可隐藏)</b>
-        </summary>
-        <br>
-        <img src="25RC合影.jpg" width="100%" style="border-radius:8px; border:1px solid #eee;" />
-        <img src="川大VS西南交.png" width="100%" style="border-radius:8px; border:1px solid #eee; margin-top:8px;" />
+      <img src="25RC合影.jpg" width="100%" style="border-radius:8px; border:1px solid #eee;" />
+      <img src="川大VS西南交.png" width="100%" style="border-radius:8px; border:1px solid #eee; margin-top:8px;" />
+    </td>
+  </tr>
+
+  <!-- 下半部分：独立展开的技术逻辑区 -->
+  <tr>
+    <td colspan="2">
+      <details>
+        <summary>👉 <b>展开查看硬核技术逻辑 (Why-How-What)</b></summary>
+        <table border="0" width="100%" bgcolor="#f3f4f5">
+          <tr>
+            <td style="padding: 15px;">
+              <br>
+              <b>❓ Why（需求背景）</b><br>
+              赛场要求机器人具备远距离（三分线外）投射与高动态防御能力。这要求机器人既要拥有<b>高重心物理结构</b>以应对拦截，又要具备<b>高功率密度射击系统</b>以实现远程打击。
+              <br><br>
+              <b>⚠️ How（核心挑战）</b><br>
+              1. <b>动力学失稳：</b> 高重心结构在 3m/s 启停瞬间产生巨大惯性力矩，导致底盘“翘头”震荡与定位过冲。<br>
+              2. <b>射击一致性：</b> 远距离投射要求摩擦轮极高且稳定的转速，传统电调在负载突变时落点漂移严重。
+              <br><br>
+              <b>👁️ Observation（核心洞察）</b><br>
+              高动态性能的本质是<b>“规划的平滑性”与“响应的确定性”</b>。必须通过运动学规划消除冲击力，通过高性能驱动器保证执行精度，并通过异步架构加固数据链路。
+              <br><br>
+              <b>🛠️ What（三位一体解决方案）</b><br>
+              - <b>模型层：</b> 采用<b>斜坡规划算法 (Ramp Planning)</b> 平滑加速度曲线，配合<b>前馈 PID</b>，从源头抑制翘头现象，路径误差控制在 2cm 内。<br>
+              - <b>系统层：</b> 采用 <b>VESC 电调</b>驱动无刷电机，实现毫秒级转速闭环控制，确保摩擦轮在高速带球瞬间转速稳定。<br>
+              - <b>数据层：</b> 构建<b>异步数据流框架</b>，实现多源异构数据解耦与时间戳对齐，解决了复杂环境下的定位失效问题。
+              <br><br>
+              <b>📈 So what（价值总结）</b><br>
+              凭借全栈自研的稳健控制系统，斩获 <b>ROBOCON 全国一等奖</b>。项目已形成一套“高动态底盘+高精度射击”的开源控制范式，可直接转化应用于高性能移动作业机器人等领域。
+              <br>
+            </td>
+          </tr>
+        </table>
       </details>
     </td>
   </tr>
 </table>
-
-<!-- 下半部分：独立的技术逻辑区。未展开时只显示一个按钮框 -->
-<details>
-  <!-- 强制恢复系统三角形，它在展开时会自动从 ▶ 变为 ▼ -->
-  <summary style="display: list-item; cursor: pointer; padding: 10px; background-color: #f6f8fa; border-radius: 6px; outline: none; list-style: list-item;">
-    <b>📑 点击展开硬核技术逻辑 (Why-How-What)</b>
-  </summary>
-  
-  <table border="0" width="100%" bgcolor="#f3f4f5">
-    <tr>
-      <td style="padding: 20px;">
-        <h3 align="center">⚙️ 核心技术攻关报告</h3>
-        <hr>
-        <br>
-        <b>❓ Why（需求背景）</b><br>
-        赛场要求机器人具备远距离投射能力。这要求机器人拥有<b>高重心物理结构</b>与<b>高功率密度射击系统</b>。
-        <br><br>
-        <b>⚠️ How（核心挑战）</b><br>
-        1. <b>动力学失稳：</b> 高重心结构在高速启停瞬间产生巨大惯性，导致底盘“翘头”震荡。<br>
-        2. <b>射击一致性：</b> 远距离投射要求摩擦轮极高且稳定的转速，传统电调落点漂移严重。
-        <br><br>
-        <b>👁️ Observation（核心洞察）</b><br>
-        高动态性能的本质是<b>“规划的平滑性”与“响应的确定性”</b>。必须通过运动学规划消除冲击力，通过高性能驱动器保证执行精度。
-        <br><br>
-        <b>🛠️ What（三位一体解决方案）</b><br>
-        - <b>模型层：</b> 采用<b>斜坡规划算法</b>平滑加速度，配合<b>前馈 PID</b>，路径误差控制在 2cm 内。<br>
-        - <b>系统层：</b> 采用 <b>VESC 电调</b>驱动无刷电机，实现毫秒级转速闭环，确保高速带球瞬间转速稳定。<br>
-        - <b>数据层：</b> 构建<b>异步数据流框架</b>，实现异构数据解耦与时间戳对齐。
-        <br><br>
-        <b>📈 So what（价值总结）</b><br>
-        斩获 <b>ROBOCON 全国一等奖</b>。该范式可直接转化应用于工业移动作业机器人等领域。
-        <br>
-      </td>
-    </tr>
-  </table>
-</details>
 
 ## 科创项目
 -✨ **[第二十四届全国大学生机器人大赛ROBOCON]**
