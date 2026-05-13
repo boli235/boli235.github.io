@@ -274,11 +274,11 @@ title: 范坤鹏的个人主页
     <!-- 右侧：概览文字区 (valign="top" 确保标识框在右上角) -->
     <td width="55%" valign="top" style="word-break: break-all; padding-left: 10px;">
       
-      <!-- 身份标识框：使用 align="right" 移至右上角 -->
-      <table border="0" cellpadding="0" cellspacing="0" align="right" style="margin-left: 10px; margin-bottom: 5px;">
+      <!-- 身份标识框 -->
+      <table border="0" cellpadding="0" cellspacing="0" style="margin-bottom: 15px;">
         <tr>
           <td bgcolor="#555555" style="padding: 5px 15px; border-radius: 4px;">
-            <font color="#ffffff"><b>项目职责：电控负责人</b></font>
+            <font color="#fffff"><b>项目职责：电控组长</b></font>
           </td>
         </tr>
       </table>
