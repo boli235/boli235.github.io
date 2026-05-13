@@ -209,70 +209,60 @@ title: 范坤鹏的个人主页
 ### 🚀 01. ROBOCON 赛季机器人：高度自主协同系统
 
 <table border="0">
-  <tr bgcolor="#f6f8fa">
-    <td width="100%">
-      <br>
-      <p align="center">
-        <img src="https://img.shields.io/badge/定位精度-±2cm-brightgreen?style=for-the-badge" />
-        <img src="https://img.shields.io/badge/控制周期-1ms-blue?style=for-the-badge" />
-        <img src="https://img.shields.io/badge/硬件驱动-VESC%20BLDC-orange?style=for-the-badge" />
+  <tr>
+    <!-- 左侧：文字内容区 -->
+    <td width="60%" valign="top">
+      <p align="left">
+        <img src="https://img.shields.io/badge/定位精度-±2cm-brightgreen?style=flat-square" />
+        <img src="https://img.shields.io/badge/控制周期-1ms-blue?style=flat-square" />
+        <img src="https://img.shields.io/badge/硬件驱动-VESC%20BLDC-orange?style=flat-square" />
       </p>
-      <h3 align="center">基于 VESC 与分布式架构的高动态投射平台</h3>
+      <h4>核心工作概览</h4>
+      <ul>
+        <li>基于 <b>STM32</b> 的分布式架构，调度 10 枚异构电机，实现高带宽响应。</li>
+        <li>构建基于 <b>环形缓冲队列</b> 的异步数据流框架，消除通信延迟与丢包。</li>
+        <li>利用 <b>VESC</b> 高频采样实现摩擦轮转速精准闭环，支撑三分线远距离投射。</li>
+      </ul>
+      <!-- 点击展开区域：加深背景颜色 -->
+      <details>
+        <summary>📑 <b>点击展开查看硬核技术逻辑 (Why-How-What)</b></summary>
+        <table border="0">
+          <tr>
+            <td bgcolor="#f3f4f5">
+              <br>
+              <b>❓ Why（需求背景）</b><br>
+              赛场要求机器人具备远距离（三分线外）投射与高动态防御能力。这要求机器人既要拥有<b>高重心物理结构</b>以应对拦截，又要具备<b>高功率密度射击系统</b>。
+              <br><br>
+              <b>⚠️ How（核心挑战）</b><br>
+              1. <b>动力学失稳：</b> 高重心结构在 3m/s 启停瞬间产生巨大惯性，导致底盘“翘头”震荡。<br>
+              2. <b>射击一致性：</b> 远距离投射要求摩擦轮极高且稳定的转速，传统电调在负载突变时落点漂移严重。
+              <br><br>
+              <b>👁️ Observation（核心洞察）</b><br>
+              高动态性能的本质是<b>“规划的平滑性”与“响应的确定性”</b>。必须通过运动学规划消除冲击力，通过高性能驱动器保证执行精度。
+              <br><br>
+              <b>🛠️ What（三位一体解决方案）</b><br>
+              - <b>模型层：</b> 采用<b>斜坡规划算法</b>平滑加速度，配合前馈 PID，路径误差控制在 2cm 内。<br>
+              - <b>系统层：</b> 采用 <b>VESC 电调</b>驱动无刷电机，实现毫秒级转速闭环，确保高速带球瞬间转速稳定。<br>
+              - <b>数据层：</b> 构建<b>异步数据框架</b>，实现多源数据时间戳对齐，解决复杂环境下的定位失效。
+              <br><br>
+              <b>📈 So what（价值总结）</b><br>
+              凭借全栈自研控制系统，斩获 <b>ROBOCON 全国一等奖</b>。该“高动态底盘+高精度射击”范式可直接应用于无人化体育训练及工业移动作业机器人。
+              <br>
+            </td>
+          </tr>
+        </table>
+      </details>
     </td>
-  </tr>
-  <tr bgcolor="#ffffff">
-    <td valign="top">
-      <table border="0">
-        <tr>
-          <td width="55%" valign="top">
-            <h4>💡 技术精要</h4>
-            <ul>
-              <li><b>核心攻坚：</b> 攻克了 3m/s 高速移动下的底盘稳定性与远距离三分射击的一致性难题。</li>
-              <li><b>硬件闭环：</b> 采用 <b>VESC</b> 驱动高性能无刷电机，实现高频转速采样与毫秒级功率响应。</li>
-              <li><b>协同逻辑：</b> 基于斜坡规划 (Ramp Planning) 与前馈 PID，从底层彻底消除高重心机构的震荡。</li>
-            </ul>
-            <details open>
-              <summary>📑 <b>点击收起/展开硬核技术逻辑 (Why-How-What)</b></summary>
-              <hr>
-              <table border="0" bgcolor="#f8f9fb">
-                <tr>
-                  <td>
-                    <b>❓ Why（需求背景）</b><br>
-                    ROBOCON 赛场要求机器人具备远距离（三分线外）投射能力。这要求机器人既要拥有<b>高重心物理结构</b>以应对拦截，又要具备<b>高功率密度射击系统</b>以实现远程打击。
-                    <br><br>
-                    <b>⚠️ How（核心挑战）</b><br>
-                    <ul>
-                      <li><b>动力学失稳：</b> 高重心结构在 3m/s 启停瞬间会产生巨大惯性力矩，导致底盘“翘头”震荡与定位过冲。</li>
-                      <li><b>射击一致性：</b> 远距离投射要求摩擦轮极高且稳定的转速，传统电调在负载突变时转速波动大。</li>
-                    </ul>
-                    <b>👁️ Observation（核心洞察）</b><br>
-                    高动态性能的本质是<b>“规划的平滑性”与“响应的确定性”</b>。必须通过运动学规划消除冲击力，通过高性能驱动器保证执行精度。
-                    <br><br>
-                    <b>🛠️ What（三位一体解决方案）</b><br>
-                    <ul>
-                      <li><b>模型层面：</b> 采用<b>斜坡规划算法</b>平滑加速度曲线，配合带前馈补偿的改进 PID，路径误差控制在 2cm 内。</li>
-                      <li><b>系统层面：</b> 采用 <b>VESC 电调</b>驱动无刷电机，实现高频转速闭环，支撑全自动精准三分投射。</li>
-                      <li><b>数据层面：</b> 构建<b>环形缓冲队列异步框架</b>，实现异构数据解耦与时间戳对齐，解决了复杂定位失效问题。</li>
-                    </ul>
-                    <b>📈 So what（价值总结）</b><br>
-                    凭借全栈自研的稳健控制系统，斩获 <b>ROBOCON 全国一等奖</b>。该系统形成的“高动态底盘+高精度射击”范式，可直接转化应用于高性能移动作业机器人等工业领域。
-                  </td>
-                </tr>
-              </table>
-            </details>
-          </td>
-          <td width="45%" align="center" valign="middle">
-            <br>
-            <img src="川大VS西南交.png" width="100%" style="border-radius:10px; border: 2px solid #eaecef;" />
-            <br><br>
-            <img src="https://img.shields.io/badge/Award-National%20First%20Prize-gold?style=flat-square" />
-          </td>
-        </tr>
-      </table>
+    <!-- 右侧：图片展示区 (固定宽度，防止上下跳动) -->
+    <td width="40%" valign="top" align="center">
+      <img src="25RC合影.jpg" width="100%" style="border-radius:8px; border:1px solid #eee;" />
+      <p><sub><i>团队合影</i></sub></p>
+      <img src="川大VS西南交.png" width="100%" style="border-radius:8px; border:1px solid #eee;" />
+      <p><sub><i>高动态对战现场</i></sub></p>
+      <img src="https://img.shields.io/badge/🏆-National%20First%20Prize-gold" />
     </td>
   </tr>
 </table>
-
 ---
 
 ## 科创项目
