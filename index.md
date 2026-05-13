@@ -296,7 +296,7 @@ title: 范坤鹏的个人主页
     </td>
     
     <!-- 右侧：概览文字区 (valign="middle" 确保左右中心对齐) -->
-    <td width="55%" valign="middle" style="word-break: break-all;">
+    <td width="55%" valign="top" style="word-break: break-all; padding-left: 10px;">
       <!-- 身份标识框 -->
       <table border="0" cellpadding="0" cellspacing="0">
         <tr>
