@@ -289,14 +289,14 @@ title: 范坤鹏的个人主页
 <table border="0" width="100%">
   <!-- 上半部分：图文并排区 -->
   <tr>
-    <!-- 左侧：图片/GIF区 (保持 45% 宽度) -->
-    <td width="45%" align="center" valign="top">
+    <!-- 左侧：图片/GIF区 (关键修改：valign="middle" 实现垂直居中) -->
+    <td width="45%" align="center" valign="middle">
       <img src="../R2投篮.gif" width="100%" style="border-radius:10px; border: 1px solid #ddd;" />
       <br><sub><i>R2 机器人自主抛射演示</i></sub>
     </td>
     
-    <!-- 右侧：概览文字区 (保持 55% 宽度，加入 word-break) -->
-    <td width="55%" valign="top" style="word-break: break-all;">
+    <!-- 右侧：概览文字区 (valign="middle" 确保左右中心对齐) -->
+    <td width="55%" valign="middle" style="word-break: break-all;">
       <!-- 身份标识框 -->
       <table border="0" cellpadding="0" cellspacing="0">
         <tr>
@@ -323,7 +323,7 @@ title: 范坤鹏的个人主页
     </td>
   </tr>
 
-  <!-- 下半部分：技术逻辑 (与 ROBOCON 结构完全一致) -->
+  <!-- 下半部分：技术逻辑 (保持不变) -->
   <tr>
     <td colspan="2">
       <details>
@@ -351,7 +351,7 @@ title: 范坤鹏的个人主页
               - <b>算法层：</b> 通过多距离采样与<b>曲线拟合算法</b>，建立弹簧蓄力位移与真实抛射距离的非线性映射模型，解决自适应精准打击。
               <br><br>
               <b>📈 价值总结 (So what)</b><br>
-              项目以“优秀”等级结题。验证了矢量底盘在复杂场景下的优越性，通过非线性建模解决变距离投射的方案，已成功推广应用于多种复杂气动/弹射耦合控制场景。
+              凭借全栈自研的稳健控制系统，项目以“优秀”等级结题。验证了矢量底盘在复杂场景下的优越性，方案已成功推广应用于多种智能体育辅助设备。
               <br>
             </td>
           </tr>
