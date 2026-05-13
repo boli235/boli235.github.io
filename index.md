@@ -282,6 +282,85 @@ title: 范坤鹏的个人主页
   </tr>
 </table>
 
+<br>
+
+### 🏀 02. 国家级大创：基于矢量底盘的篮球机器人
+
+<table border="0" width="100%">
+  <!-- 上半部分：图文并排区 -->
+  <tr>
+    <!-- 左侧：图片/GIF区 (保持 45% 宽度) -->
+    <td width="45%" align="center" valign="top">
+      <img src="../R2投篮.gif" width="100%" style="border-radius:10px; border: 1px solid #ddd;" />
+      <br><sub><i>R2 机器人自主抛射演示</i></sub>
+    </td>
+    
+    <!-- 右侧：概览文字区 (保持 55% 宽度，加入 word-break) -->
+    <td width="55%" valign="top" style="word-break: break-all;">
+      <!-- 身份标识框 -->
+      <table border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td bgcolor="#555555" style="padding: 5px 15px; border-radius: 4px;">
+            <font color="#ffffff"><b>项目职责：项目负责人 / 电控主创</b></font>
+          </td>
+        </tr>
+      </table>
+      
+      <p align="left" style="margin-top: 10px;">
+        <img src="https://img.shields.io/badge/级别-国家级重点-red" />
+        <img src="https://img.shields.io/badge/底盘-4舵轮矢量-blueviolet" />
+        <img src="https://img.shields.io/badge/算法-非线性拟合-yellow" />
+      </p>
+      
+      <b>项目描述：</b>自主研制集全向高机动位移、主动吸附运球、高精度抛射于一体的智能机器人。<br>
+      
+      <h4>核心贡献：</h4>
+      <ul>
+        <li><b>矢量底盘建模：</b> 独立转向驱动单元的逆运动学解算，实现全向机动。</li>
+        <li><b>气动耦合控制：</b> 精确时序策略控制真空泵与电磁阀，实现高可靠“拍球”。</li>
+        <li><b>轨迹预测模型：</b> 利用<b>曲线拟合算法</b>建立弹簧蓄力与距离的数学映射。</li>
+      </ul>
+    </td>
+  </tr>
+
+  <!-- 下半部分：技术逻辑 (与 ROBOCON 结构完全一致) -->
+  <tr>
+    <td colspan="2">
+      <details>
+        <summary style="display: list-item; cursor: pointer; padding: 12px; background-color: #f6f8fa; border-radius: 6px; outline: none; color: #0366d6;">
+          <b>问题提出与突破 (Why-How-What)</b>
+        </summary>
+        
+        <table border="0" width="100%" bgcolor="#f3f4f5">
+          <tr>
+            <td style="padding: 15px; word-break: break-all;">
+              <br>
+              <b>❓ 需求背景 (Why)</b><br>
+              针对体育智能化训练需求，研制一款集高机动位移、主动吸附运球与精准抛射于一体的智能终端，复现运动员滑步与投篮直觉。
+              <br><br>
+              <b>⚠️ 挖掘问题 (How)</b><br>
+              1. <b>全向机动性：</b> 如何在室内环境下实现负载更高、指向更精准的矢量移动以复现滑步动作。<br>
+              2. <b>动态耦合：</b> “拍球”动作涉及气动吸附与释放的微秒级时序配合，且投篮距离的变化对机构建模提出了自适应要求。
+              <br><br>
+              <b>🤔 理论分析 (Observation)</b><br>
+              体育机器人的核心在于<b>“柔性动作的刚性实现”</b>。即通过精确的数学模型（轨迹拟合）复现运动员的投篮直觉，通过严格的逻辑序列（状态机）复现高频运球节奏。
+              <br><br>
+              <b>💡 提出方法 (What)</b><br>
+              - <b>底盘层：</b> 完成<b>独立舵轮逆运动学解算</b>，配合 3D 激光雷达位姿估计，支撑机器人在赛场环境下的快速移动与路径追踪。<br>
+              - <b>逻辑层：</b> 构建由真空泵、稳压阀组成的<b>多级气路时序控制策略</b>，基于有限状态机严格匹配吸附-释放周期。<br>
+              - <b>算法层：</b> 通过多距离采样与<b>曲线拟合算法</b>，建立弹簧蓄力位移与真实抛射距离的非线性映射模型，解决自适应精准打击。
+              <br><br>
+              <b>📈 价值总结 (So what)</b><br>
+              项目以“优秀”等级结题。验证了矢量底盘在复杂场景下的优越性，通过非线性建模解决变距离投射的方案，已成功推广应用于多种复杂气动/弹射耦合控制场景。
+              <br>
+            </td>
+          </tr>
+        </table>
+      </details>
+    </td>
+  </tr>
+</table>
+
 ## 科创项目
 -✨ **[第二十四届全国大学生机器人大赛ROBOCON]**
 <table align="center" border="0" cellpadding="10">
