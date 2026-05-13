@@ -213,15 +213,14 @@ title: 范坤鹏的个人主页
   <tr>
     <!-- 左侧：核心概览 -->
     <td width="60%" valign="top">
-<!-- 身份标识框：使用亮绿色背景 -->
+      <!-- 身份标识框 -->
       <table border="0" cellpadding="0" cellspacing="0">
         <tr>
           <td bgcolor="#4cc141" style="padding: 5px 15px; border-radius: 4px;">
-            <font color="#fff"><b>项目职责：电控组长 (Control Lead)</b></font>
+            <font color="#fff"><b>项目职责：电控负责人 (Control Lead)</b></font>
           </td>
         </tr>
       </table>
-      <br>
       <h4>核心工作概览</h4>
       <ul>
         <li>基于 <b>STM32</b> 的分布式架构，调度 10 枚异构电机，实现高带宽响应。</li>
