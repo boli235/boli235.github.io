@@ -134,7 +134,7 @@ title: 范坤鹏的个人主页
         <img src="https://img.shields.io/badge/通信-CAN%20Bus-orange" />
       </p>
       <b>项目描述：</b> 研发全自动投射机器人，攻克高动态下机构控制精度、实时定位及多机协同难题。<br><br>
-      <b>核心贡献：</b>
+      <b>核心工作概览：</b>
       <ul>
         <li>基于 <b>STM32</b> 的分布式架构，调度 10 枚异构电机，实现高带宽响应。</li>
         <li>设计 <b>带前馈补偿的改进 PID</b>，在 3m/s 高速下有效补偿底盘打滑。</li>
@@ -301,7 +301,7 @@ title: 范坤鹏的个人主页
       <table border="0" cellpadding="0" cellspacing="0">
         <tr>
           <td bgcolor="#555555" style="padding: 5px 15px; border-radius: 4px;">
-            <font color="#ffffff"><b>项目职责：项目负责人 / 电控主创</b></font>
+            <font color="#ffffff"><b>项目职责：电控负责人</b></font>
           </td>
         </tr>
       </table>
