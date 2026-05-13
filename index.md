@@ -306,12 +306,6 @@ title: 范坤鹏的个人主页
         </tr>
       </table>
       
-      <p align="left" style="margin-top: 10px;">
-        <img src="https://img.shields.io/badge/级别-国家级重点-red" />
-        <img src="https://img.shields.io/badge/底盘-4舵轮矢量-blueviolet" />
-        <img src="https://img.shields.io/badge/算法-非线性拟合-yellow" />
-      </p>
-      
       <b>项目描述：</b>自主研制集全向高机动位移、主动吸附运球、高精度抛射于一体的智能机器人。<br>
       
       <h4>核心贡献：</h4>
