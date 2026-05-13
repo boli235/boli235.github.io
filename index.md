@@ -299,29 +299,24 @@ title: 范坤鹏的个人主页
 <table border="0" width="100%">
   <!-- 上半部分：图文并排区 -->
   <tr>
-    <!-- 左侧：图片/GIF区 (垂直居中) -->
+    <!-- 左侧：图片/GIF区 (关键修改：valign="middle" 实现垂直居中) -->
     <td width="45%" align="center" valign="middle">
       <img src="../R2投篮.gif" width="100%" style="border-radius:10px; border: 1px solid #ddd;" />
-      <br><sub><i>R2 机器人自主抛射演示</i></sub>
+      <br><sub><i>机器人自主抛射演示</i></sub>
     </td>
     
-    <!-- 右侧：概览文字区 (valign="top" 确保内容从最顶部开始) -->
-    <td width="55%" valign="top" style="word-break: break-all; padding-left: 10px;">
-      
-      <!-- 身份标识框：置于代码最前端，使用 align="right" 实现右浮动，margin-top:0 确保在最顶端 -->
-      <table border="0" cellpadding="0" cellspacing="0" align="right" style="margin-left: 10px; margin-bottom: 5px; margin-top: 0;">
+    <!-- 右侧：概览文字区 (valign="middle" 确保左右中心对齐) -->
+    <td width="55%" valign="middle" style="word-break: break-all;">
+      <!-- 身份标识框 -->
+      <table border="0" cellpadding="0" cellspacing="0">
         <tr>
-          <td bgcolor="#555555" style="padding: 4px 12px; border-radius: 4px;">
-            <font color="#ffffff" size="2"><b>项目职责：电控负责人</b></font>
+          <td bgcolor="#555555" style="padding: 5px 15px; border-radius: 4px;">
+            <font color="#ffffff"><b>项目职责：电控负责人</b></font>
           </td>
         </tr>
       </table>
       
-      <!-- 项目描述紧跟其后 -->
-      <div style="margin-top: 0;">
-        <b>项目描述：</b>自主研制集全向高机动位移、主动吸附运球、高精度抛射于一体的智能机器人。
-      </div>
-      <br>
+      <b>项目描述：</b>自主研制集全向高机动位移、主动吸附运球、高精度抛射于一体的智能机器人。<br>
       
       <h4>核心贡献：</h4>
       <ul>
@@ -344,17 +339,17 @@ title: 范坤鹏的个人主页
           <tr>
             <td style="padding: 15px; word-break: break-all;">
               <br>
-              <b>❓ 需求驱动 (Why)</b><br>
+              <b>❓ 需求背景 (Why)</b><br>
               针对体育智能化训练需求，研制一款集高机动位移、主动吸附运球与精准抛射于一体的智能终端，复现运动员滑步与投篮直觉。
               <br><br>
-              <b>⚠️ 核心痛点 (How)</b><br>
+              <b>⚠️ 挖掘问题 (How)</b><br>
               1. <b>全向机动性：</b> 如何在室内环境下实现负载更高、指向更精准的矢量移动以复现滑步动作。<br>
               2. <b>动态耦合：</b> “拍球”动作涉及气动吸附与释放的微秒级时序配合，且投篮距离的变化对机构建模提出了自适应要求。
               <br><br>
-              <b>🤔 机理洞察 (Observation)</b><br>
+              <b>🤔 理论分析 (Observation)</b><br>
               体育机器人的核心在于<b>“柔性动作的刚性实现”</b>。即通过精确的数学模型（轨迹拟合）复现运动员的投篮直觉，通过严格的逻辑序列（状态机）复现高频运球节奏。
               <br><br>
-              <b>💡 方法提出 (What)</b><br>
+              <b>💡 提出方法 (What)</b><br>
               - <b>底盘层：</b> 完成<b>独立舵轮逆运动学解算</b>，配合 3D 激光雷达位姿估计，支撑机器人在赛场环境下的快速移动与路径追踪。<br>
               - <b>逻辑层：</b> 构建由真空泵、稳压阀组成的<b>多级气路时序控制策略</b>，基于有限状态机严格匹配吸附-释放周期。<br>
               - <b>算法层：</b> 通过多距离采样与<b>曲线拟合算法</b>，建立弹簧蓄力位移与真实抛射距离的非线性映射模型，解决自适应精准打击。
