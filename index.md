@@ -114,6 +114,97 @@ title: 范坤鹏的个人主页
 </table>
 
 ---
+# 🤖 个人科研与工程能力展示 (Robotics Portfolio)
+
+> 🎓 **联系方式**：[你的姓名] | [你的邮箱] | [你的学校]
+> 🏆 **核心荣誉**：ROBOCON 全国二等奖、国家级大创优秀结题、XX 奖学金
+
+---
+
+## 🛠 核心科研项目 (Project Demos)
+*点击下方各项目的 [Details] 可查看算法说明与代码实现*
+
+### 🚀 01. ROBOCON 赛季机器人：高度自主协同系统
+<table border="0">
+  <tr>
+    <td width="55%" valign="top">
+      <p align="left">
+        <img src="https://img.shields.io/badge/定位精度-±2cm-brightgreen" />
+        <img src="https://img.shields.io/badge/控制周期-1ms-blue" />
+        <img src="https://img.shields.io/badge/通信-CAN%20Bus-orange" />
+      </p>
+      <b>项目描述：</b> 研发全自动投射机器人，攻克高动态下机构控制精度、实时定位及多机协同难题。<br><br>
+      <b>核心贡献：</b>
+      <ul>
+        <li>基于 <b>STM32</b> 的分布式架构，调度 10 枚异构电机，实现高带宽响应。</li>
+        <li>设计 <b>带前馈补偿的改进 PID</b>，在 3m/s 高速下有效补偿底盘打滑。</li>
+        <li>构建基于<b>环形缓冲队列</b>的异步数据流框架，消除通信延迟。</li>
+      </ul>
+      <details>
+        <summary>📑 <b>点击展开查看硬核技术文档 (算法/逻辑)</b></summary>
+        <br>
+        <blockquote>
+          <b>位姿解算：</b>融合高频 IMU 与码盘数据，采用插值算法处理非同步误差。<br>
+          <b>射击闭环：</b>利用 VESC 高频采样特性，实现摩擦轮转速的精准闭环控制。
+        </blockquote>
+      </details>
+    </td>
+    <td width="45%" align="center">
+      <img src="川大VS西南交.png" width="100%" style="border-radius:10px; border: 1px solid #ddd;" />
+      <br><sub><i>高动态对战现场演示</i></sub>
+    </td>
+  </tr>
+</table>
+
+<br>
+
+### 🏀 02. 国家级大创：基于矢量底盘的篮球机器人
+<table border="0">
+  <tr>
+    <td width="45%" align="center">
+      <img src="../R2投篮.gif" width="100%" style="border-radius:10px; border: 1px solid #ddd;" />
+      <br><sub><i>R2 机器人自主抛射演示</i></sub>
+    </td>
+    <td width="55%" valign="top">
+      <p align="left">
+        <img src="https://img.shields.io/badge/级别-国家级重点-red" />
+        <img src="https://img.shields.io/badge/底盘-4舵轮矢量-blueviolet" />
+        <img src="https://img.shields.io/badge/算法-非线性拟合-yellow" />
+      </p>
+      <b>项目描述：</b> 自主研制集全向高机动位移、主动吸附运球、高精度抛射于一体的智能机器人。<br><br>
+      <b>核心贡献：</b>
+      <ul>
+        <li><b>矢量底盘建模：</b> 独立转向驱动单元的逆运动学解算，实现全向机动。</li>
+        <li><b>气动耦合控制：</b> 精确时序策略控制真空泵与电磁阀，实现高可靠“拍球”。</li>
+        <li><b>轨迹预测模型：</b> 利用<b>曲线拟合算法</b>建立弹簧蓄力与距离的数学映射。</li>
+      </ul>
+    </td>
+  </tr>
+</table>
+
+<br>
+
+### 📦 03. 创新年会：球类辅助与物资转运机器人
+<table border="0">
+  <tr>
+    <td width="55%" valign="top">
+      <p align="left">
+        <img src="https://img.shields.io/badge/应用-多任务调度-lightgrey" />
+        <img src="https://img.shields.io/badge/逻辑-FSM%20状态机-blue" />
+      </p>
+      <b>项目描述：</b> 集麦轮拾球、摩擦轮发射与双二自由度夹爪于一体的复合机器人。<br><br>
+      <b>核心贡献：</b>
+      <ul>
+        <li>基于<b>状态机思想</b>设计调度逻辑，解决多机构间的物理干涉与时序冲突。</li>
+        <li>优化<b>差速控制算法</b>，利用麦克纳姆轮分力特性提升拾球稳定性。</li>
+      </ul>
+    </td>
+    <td width="45%" align="center">
+      <img src="../创新年会.jpg" width="100%" style="border-radius:10px; border: 1px solid #ddd;" />
+      <br><sub><i>创新年会作品现场展示</i></sub>
+    </td>
+  </tr>
+</table>
 
 ### 🏀 [国家级大创] 基于矢量底盘的多功能篮球机器人
 > **关键词：** `舵轮矢量底盘` `气动系统` `非线性拟合`
