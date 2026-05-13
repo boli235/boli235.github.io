@@ -208,54 +208,64 @@ title: 范坤鹏的个人主页
 
 ### 🚀 01. 第二十四届全国大学生机器人大赛 ROBOCON
 <table border="0">
-  <tr>
-    <!-- 左侧：文字内容区 -->
-    <td width="60%" valign="top">
-      <p align="left">
-        <img src="https://img.shields.io/badge/定位精度-±2cm-brightgreen?style=flat-square" />
-        <img src="https://img.shields.io/badge/控制周期-1ms-blue?style=flat-square" />
-        <img src="https://img.shields.io/badge/硬件驱动-VESC%20BLDC-orange?style=flat-square" />
+  <!-- 标题横梁：带背景色，放置核心指标 -->
+  <tr bgcolor="#f6f8fa">
+    <td colspan="2">
+      <br>
+      <p align="center">
+        <img src="https://img.shields.io/badge/定位精度-±2cm-brightgreen?style=for-the-badge" />
+        <img src="https://img.shields.io/badge/控制周期-1ms-blue?style=for-the-badge" />
+        <img src="https://img.shields.io/badge/硬件驱动-VESC%20BLDC-orange?style=for-the-badge" />
       </p>
-      <h4>核心工作概览</h4>
+      <h3 align="center">基于 VESC 与分布式架构的高动态投射平台</h3>
+    </td>
+  </tr>
+  <!-- 内容区 -->
+  <tr>
+    <!-- 左侧文字区：55% 宽度 -->
+    <td width="55%" valign="top">
+      <h4>💡 技术精要</h4>
       <ul>
-        <li>基于 <b>STM32</b> 的分布式架构，调度 10 枚异构电机，实现底层高带宽响应。</li>
-        <li>构建基于 <b>环形缓冲队列</b> 的异步数据流框架，解决了高频通信下的粘包与数据延迟。</li>
-        <li>利用 <b>VESC</b> 高频采样特性实现摩擦轮精准闭环，支撑全自动远距离三分投射。</li>
+        <li><b>核心攻坚：</b> 攻克 3m/s 高速下高重心底盘的稳定性与三分线远射的一致性难题。</li>
+        <li><b>分布式架构：</b> 基于 STM32 + CAN 总线调度 10 枚异构电机，实现底层高带宽响应。</li>
+        <li><b>异步框架：</b> 构建环形缓冲队列处理多源数据，消除通信延迟与粘包丢包。</li>
       </ul>
       <details>
         <summary>📑 <b>点击展开查看硬核技术逻辑 (Why-How-What)</b></summary>
-        <table border="0">
+        <hr>
+        <table border="0" bgcolor="#f8f9fb">
           <tr>
-            <td bgcolor="#f3f4f5">
-              <br>
+            <td>
               <b>❓ Why（需求背景）</b><br>
-              赛场要求机器人具备远距离投射与高动态防御能力。这要求机器人既要拥有<b>高重心物理结构</b>以应对拦截，又要具备<b>高功率密度射击系统</b>。
+              赛场要求机器人具备远距离（三分线外）投射与高动态防御能力。这要求机器人既要拥有<b>高重心物理结构</b>以应对拦截，又要具备<b>高功率密度射击系统</b>。
               <br><br>
               <b>⚠️ How（核心挑战）</b><br>
-              1. <b>动力学失稳：</b> 高重心结构在 3m/s 启停瞬间产生巨大惯性，导致底盘“翘头”震荡。<br>
-              2. <b>射击一致性：</b> 远距离投射要求摩擦轮极高且稳定的转速，传统电调在负载突变时落点漂移严重。
-              <br><br>
+              <ul>
+                <li><b>动力学失稳：</b> 高重心结构在 3m/s 启停瞬间产生巨大惯性力矩，导致底盘“翘头”震荡与定位过冲。</li>
+                <li><b>射击一致性：</b> 远距离投射要求摩擦轮极高且稳定的转速，传统电调在负载突变时转速波动大，导致落点漂移。</li>
+              </ul>
               <b>👁️ Observation（核心洞察）</b><br>
               高动态性能的本质是<b>“规划的平滑性”与“响应的确定性”</b>。必须通过运动学规划消除冲击力，通过高性能驱动器保证执行精度。
               <br><br>
               <b>🛠️ What（三位一体解决方案）</b><br>
-              - <b>模型层：</b> 采用<b>斜坡规划算法</b>平滑加速度，配合前馈 PID，路径误差控制在 2cm 内。<br>
-              - <b>系统层：</b> 采用 <b>VESC 电调</b>驱动无刷电机，实现毫秒级转速闭环，确保高速带球瞬间转速稳定。<br>
-              - <b>数据层：</b> 构建<b>异步数据框架</b>，实现多源异构数据解耦与时间戳对齐。
-              <br><br>
+              <ul>
+                <li><b>模型层：</b> 采用<b>斜坡规划算法 (Ramp Planning)</b> 平滑加速度曲线，配合前馈 PID，路径误差控制在 2cm 内。</li>
+                <li><b>系统层：</b> 采用 <b>VESC 电调</b>驱动无刷电机，实现高频转速闭环，确保摩擦轮在高速带球瞬间转速稳定。</li>
+                <li><b>数据层：</b> 构建<b>异步数据流框架</b>，实现多源异构数据（码盘/激光雷达）解耦与时间戳对齐。</li>
+              </ul>
               <b>📈 So what（价值总结）</b><br>
-              斩获 ROBOCON 全国一等奖。该“高动态底盘+高精度射击”范式可直接转化为高性能移动作业机器人、无人化体育训练设备等工业与民用领域。
-              <br>
+              斩获 <b>ROBOCON 全国一等奖</b>。该“高动态底盘+高精度射击”范式可直接转化应用于高性能移动作业机器人、无人化体育训练设备等领域。
             </td>
           </tr>
         </table>
       </details>
     </td>
-    <!-- 右侧：图片展示区 -->
-    <td width="40%" valign="top" align="center">
-      <img src="25RC合影.jpg" width="100%" style="border-radius:8px; border:1px solid #eee;" />
+    <!-- 右侧图片区：45% 宽度，固定排版 -->
+    <td width="45%" valign="top" align="center">
+      <br>
+      <img src="25RC合影.jpg" width="100%" style="border-radius:10px; border: 1px solid #eee;" />
       <p><sub><i>团队合影</i></sub></p>
-      <img src="川大VS西南交.png" width="100%" style="border-radius:8px; border:1px solid #eee;" />
+      <img src="川大VS西南交.png" width="100%" style="border-radius:10px; border: 1px solid #eee;" />
       <p><sub><i>高动态对战现场演示</i></sub></p>
     </td>
   </tr>
@@ -265,52 +275,60 @@ title: 范坤鹏的个人主页
 
 ### 🏀 02. 国家级大创：基于矢量底盘的多功能篮球机器人
 <table border="0">
-  <tr>
-    <td width="60%" valign="top">
-      <p align="left">
-        <img src="https://img.shields.io/badge/级别-国家级重点-red?style=flat-square" />
-        <img src="https://img.shields.io/badge/技术-舵轮矢量控制-blueviolet?style=flat-square" />
-        <img src="https://img.shields.io/badge/算法-非线性拟合-yellow?style=flat-square" />
+  <tr bgcolor="#f6f8fa">
+    <td colspan="2">
+      <br>
+      <p align="center">
+        <img src="https://img.shields.io/badge/项目级别-国家级重点-red?style=for-the-badge" />
+        <img src="https://img.shields.io/badge/底盘技术-舵轮矢量控制-blueviolet?style=for-the-badge" />
+        <img src="https://img.shields.io/badge/算法核心-非线性拟合-yellow?style=for-the-badge" />
       </p>
-      <h4>核心工作概览</h4>
+      <h3 align="center">集高机动位移、动态运球与自适应投射于一体的智能终端</h3>
+    </td>
+  </tr>
+  <tr>
+    <td width="55%" valign="top">
+      <h4>💡 技术精要</h4>
       <ul>
-        <li>研发基于四个独立转向/驱动单元的<b>舵轮矢量底盘</b>，实现全向机动。</li>
-        <li>设计由真空泵、储气罐及电磁阀组成的<b>多级气路系统</b>，模拟动态“拍球”。</li>
-        <li>建立基于<b>非线性拟合</b>的抛射轨迹模型，解决变距离目标的精准自适应打击。</li>
+        <li><b>矢量控制：</b> 研发四个独立转向/驱动单元，实现平移、旋转及复合全向运动。</li>
+        <li><b>时序逻辑：</b> 设计多级气路系统，基于有限状态机 (FSM) 实现高可靠的连续动态运球。</li>
+        <li><b>建模映射：</b> 建立弹簧蓄力位移与真实抛射距离的数学映射模型，攻克变距离目标打击难题。</li>
       </ul>
       <details>
         <summary>📑 <b>点击展开查看硬核技术逻辑 (Why-How-What)</b></summary>
-        <table border="0">
+        <hr>
+        <table border="0" bgcolor="#f8f9fb">
           <tr>
-            <td bgcolor="#f3f4f5">
-              <br>
+            <td>
               <b>❓ Why（需求背景）</b><br>
-              针对体育数字化训练需求，需要一款能模拟运动员滑步、自动运球并根据距离自适应投篮的智能终端。
+              针对体育数字化训练需求，自主研制集全向位移、主动吸附运球、高精度抛射于一体的机器人，为体育数字化训练提供高集成硬件方案。
               <br><br>
               <b>⚠️ How（核心挑战）</b><br>
-              1. <b>全向机动性：</b> 如何在有限空间内实现比麦轮负载更高、控制更灵活的矢量移动。<br>
-              2. <b>时序耦合：</b> “拍球”动作涉及气动吸附与机械弹射的严格时序配合，微秒级误差即导致球权丢失。
-              <br><br>
+              <ul>
+                <li><b>高机动全向移动：</b> 如何在复杂室内环境下实现负载更高、指向更精准的矢量移动。</li>
+                <li><b>动态运球模拟：</b> “拍球”动作涉及真空吸附与气缸释放的极短时序切换，对逻辑确定性要求极高。</li>
+              </ul>
               <b>👁️ Observation（核心洞察）</b><br>
-              体育机器人的核心在于<b>“柔性动作的刚性实现”</b>。即通过精确的数学模型（轨迹拟合）和严格的状态机逻辑，去复现运动员的模糊直觉。
+              体育机器人的核心在于<b>“柔性动作的刚性实现”</b>。通过精确的数学拟合复现运动员的投篮直觉，通过严格的状态机复现运球节奏。
               <br><br>
-              <b>🛠️ What（三位一体解决方案）</b><br>
-              - <b>底盘层：</b> 构建底盘<b>逆运动学解算</b>，融合 3D 激光雷达与码盘数据实现高精度室内定位。<br>
-              - <b>逻辑层：</b> 基于<b>有限状态机 (FSM)</b> 构建气路执行策略，严格匹配吸附-释放的周期。<br>
-              - <b>数学层：</b> 通过多距离采样与曲线拟合，建立<b>弹簧蓄力位移与真实距离</b>的数学映射。
-              <br><br>
+              <b>🛠️ What（解决方案）</b><br>
+              <ul>
+                <li><b>底盘层：</b> 构建<b>逆运动学解算</b>实现全向运动，融合 3D 激光雷达与码盘数据支撑路径追踪。</li>
+                <li><b>气路层：</b> 设计由真空泵、稳压阀等组成的<b>多级气路系统</b>，实现吸附-释放周期的精确匹配。</li>
+                <li><b>算法层：</b> 通过多距离采样与<b>曲线拟合算法</b>，建立弹簧蓄力位移与抛射距离的非线性模型。</li>
+              </ul>
               <b>📈 So what（价值总结）</b><br>
-              该项目以“优秀”等级结题，为体育数字化提供了高集成度的硬件方案，相关矢量控制算法已应用至实验室其他复合移动平台。
-              <br>
+              项目以“优秀”等级结题。验证了矢量底盘在复杂竞技场景下的优越性，为体育数字化训练机器人提供了成熟的模型支撑。
             </td>
           </tr>
         </table>
       </details>
     </td>
-    <td width="40%" valign="top" align="center">
-      <img src="SRTP机器人.png" width="100%" style="border-radius:8px; border:1px solid #eee;" />
+    <td width="45%" valign="top" align="center">
+      <br>
+      <img src="SRTP机器人.png" width="100%" style="border-radius:10px; border: 1px solid #eee;" />
       <p><sub><i>SRTP 机器人结构设计</i></sub></p>
-      <img src="../R2投篮.gif" width="100%" style="border-radius:8px; border:1px solid #eee;" />
+      <img src="../R2投篮.gif" width="100%" style="border-radius:10px; border: 1px solid #eee;" />
       <p><sub><i>自适应距离精准投篮演示</i></sub></p>
     </td>
   </tr>
@@ -320,50 +338,58 @@ title: 范坤鹏的个人主页
 
 ### 📦 03. 全国大学生创新年会：球类辅助训练与物资运送一体化机器人
 <table border="0">
-  <tr>
-    <td width="60%" valign="top">
-      <p align="left">
-        <img src="https://img.shields.io/badge/展示-国创年会-blue?style=flat-square" />
-        <img src="https://img.shields.io/badge/逻辑-FSM%20状态机-lightgrey?style=flat-square" />
+  <tr bgcolor="#f6f8fa">
+    <td colspan="2">
+      <br>
+      <p align="center">
+        <img src="https://img.shields.io/badge/展示平台-国创年会-blue?style=for-the-badge" />
+        <img src="https://img.shields.io/badge/核心调度-FSM%20状态机-lightgrey?style=for-the-badge" />
       </p>
-      <h4>核心工作概览</h4>
+      <h3 align="center">多任务协同的球类采集与物资自动化转运系统</h3>
+    </td>
+  </tr>
+  <tr>
+    <td width="55%" valign="top">
+      <h4>💡 技术精要</h4>
       <ul>
-        <li>设计多机构协同调度逻辑，解决了拾球、抓取、转运间的<b>物理干涉</b>。</li>
-        <li>负责二自由度夹爪驱动及射球<b>差速控制算法</b>，实现足球高效采集与转运。</li>
-        <li>优化麦轮分力特性，提升了机器人在狭窄场地下的路径执行连贯性。</li>
+        <li><b>协同调度：</b> 设计多机构状态机调度逻辑，有效解决了多机构间的时序冲突与物理干涉。</li>
+        <li><b>效率优化：</b> 利用麦克纳姆轮分力特性优化拨球稳定性，配合差速控制实现高效拾发球。</li>
+        <li><b>执行控制：</b> 负责二自由度夹爪驱动控制，提升机器人在狭窄场地下的动作连贯性。</li>
       </ul>
       <details>
         <summary>📑 <b>点击展开查看硬核技术逻辑 (Why-How-What)</b></summary>
-        <table border="0">
+        <hr>
+        <table border="0" bgcolor="#f8f9fb">
           <tr>
-            <td bgcolor="#f3f4f5">
-              <br>
+            <td>
               <b>❓ Why（需求背景）</b><br>
-              多任务体育场景（如足球训练）要求机器人在负责训练辅助的同时，兼顾器材的自动化采集与物资转运。
+              多任务体育场景要求机器人在高频拾发球的同时，具备转运训练物资的能力，对机构的集成度与协同性提出要求。
               <br><br>
               <b>⚠️ How（核心挑战）</b><br>
-              1. <b>机构耦合：</b> 拾球机构与物资夹爪在同一空间内工作，容易发生机械碰撞。<br>
-              2. <b>效率瓶颈：</b> 如何保证拾球、存球、发球等动作序列的无缝衔接。
-              <br><br>
+              <ul>
+                <li><b>任务干涉：</b> 拾球、抓取、转运多个动作在物理空间上存在交叠，容易发生机械碰撞。</li>
+                <li><b>动作连贯性：</b> 如何在不同任务间切换时保持底盘运动与机构执行的无缝衔接。</li>
+              </ul>
               <b>👁️ Observation（核心洞察）</b><br>
-              多任务协同的关键在于<b>“资源互斥与状态解耦”</b>。通过逻辑上的状态机隔离，确保同一时间只有一个执行机构拥有底盘或空间的优先权。
+              多任务协同的关键在于<b>“资源互斥与状态解耦”</b>。通过逻辑上的状态机隔离，确保同一时间执行机构的确定性。
               <br><br>
               <b>🛠️ What（解决方案）</b><br>
-              - <b>调度层：</b> 基于<b>状态机思想</b>设计调度逻辑，实现拾、抓、运任务的自动切换。<br>
-              - <b>执行层：</b> 优化麦克纳姆轮<b>分力补偿算法</b>，确保拨球入笼时的稳定性。
-              <br><br>
+              <ul>
+                <li><b>逻辑层：</b> 设计<b>三级有限状态机</b>，将拾球、夹取、射球动作序列化，消除时序冲突。</li>
+                <li><b>算法层：</b> 优化射球<b>差速控制算法</b>，根据任务需求实时调整射出角度与初速度。</li>
+              </ul>
               <b>📈 So what（价值总结）</b><br>
-              项目成功入选全国大学生创新年会成果展示，验证了多任务机器人在体育辅助领域的广泛应用前景。
-              <br>
+              成功入选全国大学生创新年会展示。验证了多任务机器人在复杂、狭窄场地下的路径执行精度与任务调度可靠性。
             </td>
           </tr>
         </table>
       </details>
     </td>
-    <td width="40%" valign="top" align="center">
-      <img src="../创新年会合影.jpg" width="100%" style="border-radius:8px; border:1px solid #eee;" />
-      <p><sub><i>团队年会现场展示合影</i></sub></p>
-      <img src="../创新年会.jpg" width="100%" style="border-radius:8px; border:1px solid #eee;" />
+    <td width="45%" valign="top" align="center">
+      <br>
+      <img src="../创新年会合影.jpg" width="100%" style="border-radius:10px; border: 1px solid #eee;" />
+      <p><sub><i>团队年会现场合影</i></sub></p>
+      <img src="../创新年会.jpg" width="100%" style="border-radius:10px; border: 1px solid #eee;" />
       <p><sub><i>复合机器人实物展示</i></sub></p>
     </td>
   </tr>
