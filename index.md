@@ -263,7 +263,7 @@ title: 范坤鹏的个人主页
 
 <br>
 
-### 🏀 02. 国家级大创：基于矢量底盘的篮球机器人
+### 🏀 02. 国家级大创：基于矢量底盘的多功能篮球训练机器人
 
 <table border="0" width="100%">
   <!-- 上半部分：图文并排区 -->
@@ -339,6 +339,74 @@ title: 范坤鹏的个人主页
     </td>
   </tr>
 </table>
+
+### 📦 03. 全国大学生创新年会项目：“球类辅助训练与物资运送一体化机器人”
+
+<table border="0" width="100%">
+  <!-- 上半部分：项目概览 + 图片 -->
+  <tr>
+    <td width="60%" valign="top" style="word-break: break-all; text-align: justify;">
+      <!-- 身份标识框 -->
+      <table border="0" cellpadding="0" cellspacing="0" style="margin-bottom: 15px;">
+        <tr>
+          <td bgcolor="#555555" style="padding: 5px 15px; border-radius: 4px;">
+            <font color="#ffffff"><b>项目职责：核心成员</b></font>
+          </td>
+        </tr>
+      </table>
+      
+      <b>项目描述：</b>针对多任务体育训练场景，研制的一款集<b>麦轮拾球、摩擦轮发射与双二自由度夹爪转运</b>于一体的复合机器人。系统通过多机构协同调度算法，实现了复杂场地内拾发球任务与物资自动化转运的平稳衔接。<br>
+      
+      <h4 style="margin-top: 15px;">核心工作概览</h4>
+      <ul>
+        <li><b>多任务逻辑开发：</b> 基于 <b>有限状态机</b> 设计多机构协同调度逻辑，解决了拾球、抓取、转运任务间的时序冲突。</li>
+        <li><b>执行机构控制：</b> 负责二自由度夹爪驱动及射球 <b>差速控制算法</b> 编写，利用麦轮分力特性显著提升了拨球入笼稳定性。</li>
+        <li><b>路径执行优化：</b> 参与底盘逆运动学调试，通过对速度指令的平滑处理，提升了机器人在狭窄、复杂场地下的动作连贯性。</li>
+      </ul>
+    </td>
+
+    <td width="40%" valign="middle" align="center">
+      <img src="../创新年会合影.jpg" width="100%" style="border-radius:8px; border:1px solid #eee;" />      
+      <img src="../创新年会.jpg" width="100%" style="border-radius:8px; border:1px solid #eee;" />
+    </td>
+  </tr>
+
+ <!-- 下半部分：技术细节（不走 Why-How-What 流程，直接讲干货） -->
+  <tr>
+    <td colspan="2">
+      <details>
+        <summary style="display: list-item; cursor: pointer; padding: 12px; background-color: #f6f8fa; border-radius: 6px; outline: none;">
+          <font color="#0366d6"><b>多任务协同逻辑与技术攻关细节</b></font>
+        </summary>
+        
+        <table border="0" width="100%" bgcolor="#f3f4f5">
+          <tr>
+            <td style="padding: 15px; word-break: break-all;">
+              <br>
+              <!-- 放弃 Why-How-What，改用更随性的标题 -->
+              <b>🧠 核心调度逻辑：三级状态机设计</b><br>
+              项目最核心的挑战在于<b>拾球机构</b>与<b>转运夹爪</b>在物理空间上的重叠。为了避免“打架”，构建了一套基于优先级的状态机系统：
+              <ul>
+                <li><b>原子动作层：</b> 将夹爪张合、机构升降、摩擦轮启停封装为独立的执行函数；</li>
+                <li><b>任务序列层：</b> 预设“拾球-存球-转向-放置”的逻辑链路，利用<b>逻辑锁机制</b>确保同一时间只有一个执行机构拥有底盘控制权；</li>
+                <li><b>互斥策略：</b> 实时监测各个机构的位置传感器，若夹爪未回正，则强行锁定拾球升降台，彻底解决了机构干涉导致的机械损伤问题。</li>
+              </ul>
+              <br>
+              <b>⚡ 机构优化：射球差速与麦轮拨球</b><br>
+              在处理球类采集时，通过分析麦克纳姆轮的受力分量，优化了入笼速度曲线，利用滚轮侧向分力实现自动拨球对齐。同时，针对不同重量的球类，在射球控制中加入了<b>差速补偿</b>，通过调整双摩擦轮的转速比，有效控制了出球的旋转与轨迹稳定性。
+              <br><br>
+              <b>📈 项目总结</b><br>
+              该项目最终成功入选<b>全国大学生创新年会成果展</b>。虽然整体架构不及 ROBOCON 复杂，但在<b>多机构耦合控制</b>和<b>任务解耦设计</b>上积累了宝贵的工程经验，相关状态机范式已应用到后续多个复合移动平台中。
+              <br>
+            </td>
+          </tr>
+        </table>
+      </details>
+    </td>
+  </tr>
+</table>
+
+
 
 ## 科创项目
 -✨ **[第二十四届全国大学生机器人大赛ROBOCON]**
