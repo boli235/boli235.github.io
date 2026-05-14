@@ -208,8 +208,10 @@ title: 范坤鹏的个人主页
     </td>
     <!-- 右侧：图片区 -->
     <td width="40%" valign="top" align="center">
-      <img src="25RC合影.jpg" width="100%" style="border-radius:8px; border:1px solid #eee;" />
       <img src="川大VS西南交.png" width="100%" style="border-radius:8px; border:1px solid #eee; margin-top:8px;" />
+      <br><sub><i>比赛对阵图</i></sub>
+      <img src="../RC投篮.gif" width="100%" style="border-radius:10px; border: 1px solid #ddd;" />
+      <br><sub><i>机器人投篮演示</i></sub>
     </td>
   </tr>
 
