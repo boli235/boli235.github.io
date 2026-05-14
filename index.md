@@ -142,7 +142,7 @@ title: 范坤鹏的个人主页
       <table border="0" cellpadding="0" cellspacing="0" style="margin-bottom: 15px;">
         <tr>
           <td bgcolor="#555555" style="padding: 5px 15px; border-radius: 4px;">
-            <font color="#fffff"><b>项目职责：电控组长</b></font>
+            <font color="#fffff"><b>项目职责：电控负责人</b></font>
           </td>
         </tr>
       </table>
