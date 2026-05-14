@@ -75,6 +75,7 @@ title: 范坤鹏的个人主页
       <br><sub><i>比赛对阵图</i></sub>
       <img src="../RC投篮.gif" width="100%" style="border-radius:10px; border: 1px solid #ddd;" />
       <br><sub><i>机器人投篮演示</i></sub>
+      <br>
     </td>
   </tr>
 
